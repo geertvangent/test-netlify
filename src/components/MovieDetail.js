@@ -21,6 +21,16 @@ class _MovieDetail extends Component {
   /*
   * TODO: handle component update lifecycle
   * */
+  componentDidMount() {
+    this.showMovie();
+  }
+
+
+  showMovie(movie){
+    axios.get(`${SERVER_URL}/movies`).then(movie => movie.data).then(movie => {
+      this.state.movie = movie;
+    });
+  }
 
   render() {
     const {movie} = this.state;

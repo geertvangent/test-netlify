@@ -29,7 +29,8 @@ const _FilterItems = ({
             {/*
               TODO: transform to NavLink and add `selected` class when selected
               */}
-            <a href={`/?genre=${category}`}>{category}</a>
+              <NavLink to="/?genre" activeClassName={selected}>{category}</NavLink>
+            {/*<a href={`/?genre=${category}`}>{category}</a>*/}
           </li>
         ))}
       </ul>
